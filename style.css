@@ -200,36 +200,46 @@ overflow-y: hidden;
     padding: 10px;
 }
 
+.dropdown-in-hamburger {
+  color: white;
+  list-style-type: none;
+  display: none;
+}
+
 /* mobile */
 
 @media screen and (max-width :767px) {
+    body {overflow-x: hidden;}
     .label {font-size: 15pt;
     position: absolute;
     left: 0;
     padding-left: 0px;}
     .menu {height: 40px;
     justify-content: flex-end;}
+    
     .menu ul li .dropdown{
-      display: flex;}  
-    .menu ul li:hover .dropdown {
+      display: none;}
+  .menu ul li:hover .dropdown {
       display: grid;
-      position: relative;
-      right: 100px;
-      padding: 10px;}
+      background-color: transparent;
+      position: absolute;
+      margin-top: 155px;
+      margin-right: 70px;
+      padding: 10px; }
     .menu ul {position: absolute;
-    right: 0;
+    right: 25%;
+    left: 24%;
     display: flex;
-    flex-direction: column;
     top: 0;
-    height: 100vh;
+    height: 100px;
     align-items: center;
   justify-content: space-evenly;
 z-index: -1;
-background-color: black;
-transform: translateX(100%);
+transform: translateY(-100%);
 transition: all 1s;}
 .search {display: none;}
 .button-search {display: none;}
+.dropdown-in-hamburger {display: grid;}
 .menu ul.slide {
   transform: translateX(0);
   opacity: 1;}
@@ -243,9 +253,12 @@ transition: all 1s;}
       padding-left: 0px;}
     .menu ul {display: flex;}
     .search {width: 200px;}
-    .button-search {}
+    .button-search {}   }
     
-}@media screen and (width >1023px){
+    
+    /*  PC  */
+    
+  @media screen and (width >1023px){
   .container-form {display: flex;}
   .hamburger {display: none;}
   .menu ul {display: flex;}
