@@ -209,11 +209,17 @@ overflow-y: hidden;
     padding-left: 0px;}
     .menu {height: 40px;
     justify-content: flex-end;}
+    .menu ul li .dropdown{
+      display: flex;}  
+    .menu ul li:hover .dropdown {
+      display: grid;
+      position: relative;
+      right: 100px;
+      padding: 10px;}
     .menu ul {position: absolute;
     right: 0;
     display: flex;
     flex-direction: column;
-    background-color: #03e9f4;
     top: 0;
     height: 100vh;
     align-items: center;
@@ -235,8 +241,7 @@ transition: all 1s;}
     .label {font-size: 15pt;
       left: 0;
       padding-left: 0px;}
-    .menu ul {display: flex;
-    background-color: #03e9f4;}
+    .menu ul {display: flex;}
     .search {width: 200px;}
     .button-search {}
     
